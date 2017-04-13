@@ -1,0 +1,53 @@
+/*section design for services*/
+section#service
+    display: flex
+    flex-direction: row
+    flex-wrap: nowrap
+    justify-content: center
+    
+    /*design for each service*/
+    .box
+        width: 100%
+        text-align: center
+        padding: 90px 30px
+        background: #fbfbfb
+        color: #919191
+        transition: all .2s ease-in-out
+        
+        
+        img
+            margin-bottom: 30px
+            transition: all .5s ease-in-out
+            transition-delay: .2s
+        hr
+            border: 1px solid #c4c4c4
+            max-width: 50px
+            margin-bottom: 30px
+            transition: all .5s ease-in-out
+        &:hover
+            background: #ededed
+            img
+                transform: rotateX(360deg)
+            hr
+                border: 1px solid red
+       
+        .service-name
+            text-transform: uppercase
+            color: black
+            margin-bottom: 30px
+            font:
+                family: 'Roboto', sans-serif
+                weight: bold
+            letter-spacing: 2px
+            
+/*media query for mobile device, there is now query for tablets because it looks pretty nice*/
+            
+@media screen and (max-width: 468px)
+    section#service
+        flex-direction: column
+        .box 
+            padding: 90px 0
+            .service-name
+                font-size: 18px
+            p
+                font-size: 18px

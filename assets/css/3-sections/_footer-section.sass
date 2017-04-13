@@ -1,0 +1,53 @@
+/*footer design with copyright text and mini navigation*/
+footer
+    background: 
+        color: #1e1e1e
+    color: white
+    
+    /*container that contains everything in footer*/
+    .lockup
+        max-width: 960px
+        margin: 0 auto
+        padding: 10px 0px
+        +clearfix
+        display: flex
+        justify-content: space-between
+        align-items: center
+        
+        nav
+            margin-left: 250px
+            a
+                display: inline-block
+                margin-left: 20px
+                color: #666666
+            
+                
+        .copyright, .copyright-mobile
+            margin: 0
+            text-transform: uppercase
+            font-size: 12px
+            color: #666666
+        .copyright-mobile
+                display: none
+            
+    /*tablet media query*/
+    @media screen and (max-width: 768px)
+        .lockup
+            justify-content: space-around
+            nav
+                margin-left: 0    
+                
+    /*mobile media query*/
+    @media screen and (max-width: 468px)
+        .lockup
+            nav, .copyright
+                display: none 
+            
+            .copyright-mobile  
+                display: inline
+            
+            
+            
+            
+            
+            

@@ -1,0 +1,250 @@
+.home-wrap 
+    /*background header design*/
+    header#header
+        
+        background:
+            image: url("/assets/img/hero-bg.jpg")
+            repeat: no-repeat
+            size: cover
+            position: center 
+            attachment: fixed
+            
+        /*container that define logo and navigation */
+        .header-wrapper
+            padding: 10px 20px
+            display: flex
+            justify-content: space-around
+            align-items: center
+            .logo,nav
+                margin-top: 30px
+            
+            /*logo design*/
+            .logo
+                width: 150px
+                height: 40px
+                background:
+                    image: url("/assets/img/logo.png")
+                    repeat: no-repeat
+                cursor: pointer
+
+                
+            /*navigation design */
+            nav
+                display: flex
+                a
+                    display: inline-block
+                    margin-left: 50px
+                    font-size: 14px
+                    font-family: 'Roboto', sans-serif
+                    text-transform: uppercase
+                    color: #666666
+                    transition: all .3s ease-in-out
+                    &:after
+                        content: ''
+                        display: block
+                        width: 0
+                        height: 2px
+                        background: #666666
+                        transition: width .3s
+                    &:hover:after
+                        width: 100%
+                    
+            /*burger for navigation that contains litle animation when user click on it*/
+            .mobile-nav-toggle
+                width: 50px
+                height: 50px
+                display: none
+                align-items: center
+                margin: 20px 20px 0 0
+                
+                /*burger design with pseudo class*/
+                span,
+                span:before,
+                span:after
+                    content: ''
+                    display: block
+                    height: 2px
+                    background: #666666
+                    position: relative
+                    width: 100%
+                    transition: all .3s ease-in-out
+                span:before
+                    top: 15px
+                span:after
+                    top: -17px
+                &.is-open span
+                    background: transparent
+                &.is-open span:before,
+                &.is-open  span:after
+                    transform-origin: center
+                    transform: rotate(45deg)
+                    top: 0
+                &.is-open  span:after
+                    transform: rotate(-45deg)
+
+        /*header text design*/
+
+        h1
+            text-align: center
+            letter-spacing: 0.05em
+            padding-top: 50px
+            font:
+                size: 80px
+                weight: 500
+                family: 'Roboto', sans-serif
+            color: black
+            text-transform: uppercase
+            margin-bottom: 20px
+
+            
+        /*horizontal line design*/
+        .bar
+            border: 1px solid red
+            max-width: 50px
+            margin-bottom: 30px
+
+        /*diwanee kicker design*/
+        .kicker
+            width: 600px
+            margin: 0 auto
+            padding-bottom: 80px
+            font:
+                size: 24px
+            text-align: center
+            letter-spacing: .05em
+            line-height: 1
+            
+        /*diwanee kicker for mobile phones*/
+        .mobile-kicker
+            display: none
+
+        /*animation for parallax technology*/
+        .logo, nav, h1, .kicker, .mobile-kicker
+            opacity: 0
+            transition: all 0.3s ease-in-out
+            transform: translateY(-100px)
+
+
+            &.is-showing 
+                opacity: 1
+                transform: translateY(0px)
+
+        /*media query for tablets*/
+
+        @media screen and (max-width: 768px)
+            .header-wrapper
+                justify-content: space-between
+                .mobile-nav-toggle
+                    display: flex
+                nav
+                    display: none
+                    
+    /*mobile navigation design, with dropdown effect*/
+
+    .mobile-nav
+        display: none
+        position: absolute
+        z-index: 3
+        width: 100%
+        background: rgba(black, .9)
+        margin: 100px 0 0 0
+        transition: all 0.3s ease-in-out
+        transform: translateY(-120%)
+        
+        /*unordered list that contains nav links*/
+        ul
+            list-style: none
+            margin: 0
+            padding: 0
+
+            li
+                text-align: center
+                margin: 50px 0
+                a
+                    text-decoration: none
+                    color: white
+                    text-transform: uppercase
+                    font:
+                        size: 30px
+                        weight: 300
+                        family: 'Roboto', sans-serif
+                        
+        /*container that contains social icons in navigation*/
+        .follow-us
+            padding: 0 20px
+            display: flex
+            justify-content: space-around
+            align-items: center
+
+            p
+                font:
+                    size: 24px
+                    weight: 300
+                    family: 'Roboto', sans-serif
+                color: white
+                text-transform: uppercase
+            .social
+                a
+                    display: inline-block
+                    margin-left: 30px
+                    font-size: 40px
+                    color: white
+
+
+    /*media query for mobile navigation*/
+
+    @media screen and (max-width: 768px)
+        header#header
+            background: 
+                position: center
+                
+        /* .is-open is class that triggers mobile navigation from jQuery*/
+        .mobile-nav.is-open
+            display: block
+            transform: translateY(0%)   
+    
+    /*media query for phoneblets, to manage dropdown navigation*/
+            
+    @media screen and (max-width: 668px)
+        .mobile-nav
+            ul
+                li
+                    padding: 21px 0
+                
+    /*query for mobile device*/
+        
+    @media screen and (max-width: 468px)
+        header#header
+            h1
+                padding: 0 0 30px
+                font-size: 60px
+                line-height: 1
+            .kicker 
+                display: none
+            .mobile-kicker
+                max-width: 90%
+                text-transform: uppercase
+                display: block
+                margin: 0 auto
+                padding: 60px 0 200px 0
+                font:
+                    size: 24px
+                    weight: 700
+                text-align: center
+                letter-spacing: .05em
+                line-height: 1
+        
+                
+        .mobile-nav
+            ul
+                li
+                    padding: 25px 0
+                    a
+                        font-size: 20px
+            .follow-us
+                p, .social>a
+                    font-size: 20px    
+    
+        
+        
+        

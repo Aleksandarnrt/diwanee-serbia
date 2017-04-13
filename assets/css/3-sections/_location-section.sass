@@ -1,0 +1,75 @@
+/*section design that contains container and left floated divs with informations*/
+section#location
+    background: #222222
+    color: #666666
+    
+    .location-wrapper
+        max-width: 960px
+        margin: 0 auto
+        padding: 50px 20px
+        
+        .location
+            line-height: 1
+            width: 40%
+            float: left
+            position: relative
+            &:nth-of-type(3)
+                width: 20%
+            .fa.fa-map-marker
+                position: absolute
+                top: 17px
+                color: red
+                
+            h4
+                color: white
+                margin-left: 10px
+                
+        +clearfix()
+        
+    /*mobile mini nav that is moved from footer to this section*/
+    .mobile-mini-nav
+        display: none
+        a
+            display: inline-block
+            margin-left: 5px
+            color: #666666
+            font-size: 20px
+            &:nth-of-type(3)
+                font-size: 11px
+            
+            
+            
+    @media screen and (max-width: 768px)
+        .location-wrapper 
+            padding: 50px 30px
+            
+    @media screen and (max-width: 468px)
+        .location-wrapper 
+            .location 
+                padding-left: 15px
+                line-height: 1.5
+                font-size: 20px
+                width: 90%
+                clear: left
+                &:nth-of-type(3)
+                    width: 90%
+                .fa.fa-map-marker
+                    top: 27px 
+                    font-size: 25px
+                    
+                h4
+                    margin-left: 25px
+        
+        .mobile-mini-nav 
+            display: flex
+            justify-content: space-around
+            align-items: center
+            padding-bottom: 20px
+            .soc-links
+                display: flex
+                padding: 20px 20px
+                justify-content: space-around
+                align-items: center
+                width: 100px
+                a
+                    font-size: 30px

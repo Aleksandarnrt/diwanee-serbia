@@ -1,0 +1,23 @@
+mixin jobs(title,desc,skill1,skill2,skill3,skill4)
+    .job
+        .position
+            .job-title= title
+            .job-description= desc
+            span= skill1
+            span= skill2
+            span= skill3
+            span= skill4
+        .cta-apply Prijavi se
+
+section#jobs
+    h3 otvorene pozicije
+    h1 poslovi
+    hr
+    .description We are allways looking for motivated, multi-talented, and organized people to join our diverse team.
+    +jobs('front-end developer','Trazimo frontend developera sa poznavanjem i iskustvom vise od godinu dana u Drupalu.','#HTML','#CSS3','#javaScript','#jQuery')
+    +jobs('project manager','Trazimo Project Manager-a sa odlicnim organizacionim sposobnostima i iskustvom u vodjenju digitalnih projekata...','#HTML','#CSS3','#Balsamiq','#UXSpin')
+    +jobs('ux/ui designer','Ako si kreativan i volis da radis u timu, posedujes visegodisnje iskustvo iz digitalnog dizajna, ux/ui...','#Sketch','#Adobe','#Photoshop','#Balsamiq')
+    
+    .cta-more Učitaj još pozicija
+        
+    

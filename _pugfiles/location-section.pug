@@ -1,0 +1,20 @@
+mixin locations(city,address,office,place,phone)
+    .location
+        i.fa.fa-map-marker(aria-hidden='true')
+        h4= city
+        p= address
+        p= office
+        p= place
+        p= phone
+        
+section#location
+    .location-wrapper
+        +locations('Dubai','Office Park, Building Block A','Units A301-A302','Dubai Internet City','T:971 4 - 434 7147')
+        +locations('Beirut','Dora, Seaside Road','2nd and 3rd floor','Mobile: 961 76 - 866 700','Fax: 961 1 - 244 846')
+        +locations('Belgrade','Resavska','TBA','11000','T:381 11 - 334 0117')
+        
+    .mobile-mini-nav
+        .soc-links
+            a(href="#").icon-twitter
+            a(href="#").icon-linkedin
+        a(href="#").website www.diwanee.com

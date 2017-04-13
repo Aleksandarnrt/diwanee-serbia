@@ -1,0 +1,14 @@
+mixin services(title,about)
+        .service-name= title
+        hr
+        p= about
+section#service
+        .box.development
+            img(src="../assets/img/shapes/triangle.png")   
+            +services('development','Front-end Developers play a critical role in most projects at Code and Theory. They are actively involved throughout the project lifecycle, often times starting with rapid prototypes early in the design phase.')
+        .box.ui-design
+            img(src="../assets/img/shapes/circle.png") 
+            +services('web & ui design','Front-end Developers play a critical role in most projects at Code and Theory. They are actively involved throughout the project lifecycle, often times starting with rapid prototypes early in the design phase.')
+        .box.work-in-team
+            img(src="../assets/img/shapes/square.png") 
+            +services('work in team','Front-end Developers play a critical role in most projects at Code and Theory. They are actively involved throughout the project lifecycle, often times starting with rapid prototypes early in the design phase.')
